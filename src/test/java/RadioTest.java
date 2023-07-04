@@ -190,17 +190,23 @@ public class RadioTest {
      public void shouldDecreaseVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(1);
+
         radio.minus();
+
         int expected = 0;
         int actual = radio.getCurrentVolume();
+
         Assertions.assertEquals(expected, actual);
     }
     @Test
     public void shouldNotDecreaseVolumeBelowLimit() {
         Radio radio = new Radio();
+
         radio.minus();
+
         int expected = 0;
         int actual = radio.getCurrentVolume();
+
         Assertions.assertEquals(expected, actual);
     }
 
